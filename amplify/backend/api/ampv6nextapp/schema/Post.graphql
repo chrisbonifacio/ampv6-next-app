@@ -1,0 +1,18 @@
+type Post @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  title: String!
+  content: String
+  blog: Blog @belongsTo
+}
+
+extend type Query {
+  getPostById(blogId: ID!): Post
+}
+
+extend type Mutation {
+  createPostWithDefaultTitle: Post
+}
+
+extend type Subscription {
+  onCreatePostByBlogId(blogId: ID): Post
+}
