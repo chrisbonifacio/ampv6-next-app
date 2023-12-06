@@ -5,8 +5,8 @@ type Post @model @auth(rules: [{ allow: public }]) {
   blog: Blog @belongsTo
 }
 
-extend type Query {
-  getPostById(blogId: ID!): Post
+type Query {
+  getPostById(id: ID!): Post
 }
 
 extend type Mutation {
