@@ -49,7 +49,7 @@ app.post("/todo/fail", function (req, res) {
   // Add your code here
   res
     .status(400)
-    .json({ message: "test message", url: req.url, body: req.body });
+    .json({ message: "test post call failed!", url: req.url, body: req.body });
 });
 
 app.post("/todo/*", function (req, res) {
@@ -70,7 +70,7 @@ app.put("/todo/fail", function (req, res) {
   // Add your code here
   res
     .status(400)
-    .json({ message: "put call failed!", url: req.url, body: req.body });
+    .json({ message: "test put call failed!", url: req.url, body: req.body });
 });
 
 app.put("/todo/*", function (req, res) {

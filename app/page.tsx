@@ -2,7 +2,12 @@
 import React, { useEffect } from "react";
 import "@aws-amplify/ui-react/styles.css";
 import { post, put } from "aws-amplify/api";
-import { Button, View, WithAuthenticatorProps } from "@aws-amplify/ui-react";
+import {
+  Button,
+  View,
+  WithAuthenticatorProps,
+  withAuthenticator,
+} from "@aws-amplify/ui-react";
 
 import { Amplify } from "aws-amplify";
 import awsconfig from "@/src/amplifyconfiguration.json";
@@ -56,9 +61,9 @@ const App = ({ signOut }: WithAuthenticatorProps) => {
 
   return (
     <View className="flex flex-col">
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <Button onClick={signOut}>Sign Out</Button>
-      </div>
+      </div> */}
       <div>
         <Button className="mr-4" onClick={() => postTodo()}>
           POST /todo
