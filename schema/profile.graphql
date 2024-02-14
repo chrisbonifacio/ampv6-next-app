@@ -1,0 +1,12 @@
+extend type Query {
+  getUserProfile(input: AWSJSON): String
+    @auth(rules: [{ allow: public, provider: iam }])
+    @function(name: "getProfile-${env}")
+}
+
+type Profile
+  @model
+  @auth(rules: [{ allow: public, provider: iam, operations: [read] }]) {
+  id: ID!
+  name: String!
+}
