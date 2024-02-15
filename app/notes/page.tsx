@@ -122,4 +122,4 @@ const Notes = ({ signOut }: WithAuthenticatorProps) => {
   );
 };
 
-export default withAuthenticator(Notes);
+export default Notes;
