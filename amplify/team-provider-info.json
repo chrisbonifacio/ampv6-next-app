@@ -15,7 +15,7 @@
       "function": {
         "todoFunction": {
           "deploymentBucketName": "amplify-ampv6nextapp-dev-133323-deployment",
-          "s3Key": "amplify-builds/todoFunction-3861634472326867494f-build.zip"
+          "s3Key": "amplify-builds/todoFunction-35317773716943534767-build.zip"
         }
       },
       "api": {
